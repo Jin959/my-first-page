@@ -1,22 +1,44 @@
+<!-- CSS -->
+
+<!-- 우리가 CSS를 사용하는 방법 (CSS 속성을 스스로 알아내는 방법)
+1. style 태그를 쓴다.
+2. style 속성(property)을 쓴다.  -->
+
+<!-- = CSS를 지배하는 2개의 중요한 토대 (CSS 선택자를 스스로 알아내는 방법)
+1. 선택자 : 무엇에게 {}
+2. 효과 : {무엇을}   -->
+
 <!doctype html>
 <html>
 <head>
   <title>To Do List-2.하고 싶은 일</title>
   <meta charset="utf-8">
+  <!-- style 태그 : 웹브라우져야 이건 CSS로 해석해 = 여기 안은 CSS 문법
+  style 태그 자리에 link 태그가오면 CSS로 해석해-->
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
   <h1><a href="index.html">To Do List</a></h1>
-  <!-- odered-list-->
-  <ol>
-    <li><a href="1.html">해야 할 일</a></li>
-    <li><a href="2.html">하고 싶은 일</a></li>
-    <li><a href="3.html">잘 하는 일</a></li>
-  </ol>
-  <h2 style = "margin-top:100px"> 하고 싶은 일</h2>
-  현대 미술관 방문<br>
-  서비스 개발<br>
-  웹 어플리케이션 개발<br>
-  장수<br>
+  <div id="grid">
+    <!-- odered-list-->
+    <ol>
+      <li><a href="1.html">해야 할 일</a></li>
+      <li><a href="2.html">하고 싶은 일</a></li>
+      <li><a href="3.html">잘 하는 일</a></li>
+    </ol>
+    <!-- 내부의 division 태그는 기능도없고 의미도 없이
+    h2태그와 ul태그를 그냥 묶기위해 사용 -->
+    <div id="article">
+      <h2>하고 싶은 일</h2>
+      <ul>
+        <li>현대 미술관 방문</li>
+        <li>서비스 개발</li>
+        <li>웹 어플리케이션 개발</li>
+        <li>장수</li>
+      <ul>
+    </div>
+
+  </div>
 </body>
 </html>

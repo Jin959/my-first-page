@@ -1,0 +1,61 @@
+a {
+  color:black;
+  text-decoration: underline dotted;
+}
+
+h1 {
+  font-size:50px;
+  font-family: Copperplate, "Lucida Console", Arial;
+  text-align: center;
+  border-bottom: 5px solid black;
+  margin:0px;
+  padding:20px;
+}
+
+ol{
+  width: 150px;
+  margin-top: 0px;
+  padding: 20px;
+}
+
+table{
+  border: 2px solid black;
+  width: 50%
+}
+
+body{
+  margin: 0px;
+}
+
+#grid{
+  display: grid;
+  /* ol의 style이 150+20+5 px 이기 때문에 175px 이상으로 한다. */
+  grid-template-columns: 200px 1fr;
+}
+
+#grid #article{ /* 기능상 #grid는 없어도 되지만 의미가 분명해서 적음.*/
+  padding-left: 25px;
+}
+
+#grid > ol{ /* 부모가 id=grid인 ol태그만 선택 */
+  border-right: 5px solid black;
+  padding-left: 33px;
+}
+
+/* if( screen width < 800px )*/
+@media(max-width:800px){
+  #grid {
+    display: block;
+  }
+
+  ol {
+    border-right: none;
+  }
+  #grid > ol{ /* id는 따로 지정해줘야 지워졌다. */
+    border-right: none;
+  }
+
+  h1 {
+    border-bottom: none;
+  }
+}
