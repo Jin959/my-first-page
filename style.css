@@ -1,7 +1,12 @@
+.a-night {
+  color:powderblue;
+}
+
 a {
-  color:black;
+  color:blue;
   text-decoration: underline dotted;
 }
+
 
 h1 {
   font-size:50px;
@@ -10,6 +15,9 @@ h1 {
   border-bottom: 5px solid black;
   margin:0px;
   padding:20px;
+}
+.h1-night {
+  border-bottom: 5px solid white;
 }
 
 ol{
@@ -34,10 +42,11 @@ body{
 }
 
 #grid #article{ /* 기능상 #grid는 없어도 되지만 의미가 분명해서 적음.*/
+  /* 'id=#grid인 태그' 아래에 있는 (자식인) '모든 id = #article인 태그'에 대해서 왼쪽 패딩을 준다.*/
   padding-left: 25px;
 }
 
-#grid > ol{ /* 부모가 id=grid인 ol태그만 선택 */
+#grid > ol{ /* "id=grid인 부모 태그"의 '직계 자식인 ol태그'만 선택 */
   border-right: 5px solid black;
   padding-left: 33px;
 }

@@ -1,13 +1,15 @@
 <!doctype html>
 <html>
 <head>
-  <title>To Do List-3.잘 하는 일</title>
+  <title>First Page-3.잘 하는 일</title>
   <meta charset="utf-8">
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <h1><a href="index.html">To Do List</a></h1>
+  <h1><a href="index.html">My First Page</a></h1>
+  <!--document.querySelector에서 "#id", ".class"로 속성 선택가능 -->
+  <input type="button" value="night" onclick="nightDayHandler(this)">
   <div id="grid">
     <ol>
       <li><a href="1.html">해야 할 일</a></li>
@@ -25,5 +27,39 @@
       </ul>
     </div>
   </div>
+  <script>
+    const bodyTag = document.querySelector('body');
+    const links = document.querySelectorAll('a');
+
+    const Body = {
+      setColor: function(color) {
+        bodyTag.style.color = color;
+      },
+      setBgcolor: function(color) {
+        bodyTag.style.backgroundColor = color;
+      }
+    }
+
+    const Links = {
+      setColor: function () {
+        for(var i = 0; i<links.length; i++) links[i].classList.toggle('a-night');
+      }
+    }
+
+
+    function nightDayHandler(self) {
+        if( self.value === 'night') { // day -> night
+          Body.setBgcolor('black');
+          Body.setColor('white');
+          Links.setColor();
+          self.value = 'day';
+        } else {
+          Body.setBgcolor('white');
+          Body.setColor('black');
+          Links.setColor();
+          self.value = 'night';
+        }
+    }
+  </script>
 </body>
 </html>
