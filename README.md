@@ -1,6 +1,6 @@
 Life Coding (생활코딩) Web Series
 ===
-Life Coding (생활코딩) Web Series Workspace - lectured by egoing
+[Life Coding (생활코딩)](https://opentutorials.org/course/1) Web Series Workspace - lectured by egoing
 
 ## 학습기간
 ---
