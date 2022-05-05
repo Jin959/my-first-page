@@ -10,6 +10,6 @@ Life Coding (생활코딩) Web Series Workspace - lectured by egoing
 > > - Basic HTML
 > > - Media query
 > + ### [WEB2-JavaScript](https://opentutorials.org/course/3085) v1.02 22.2.28-22.3.4 / 22.5.5   
-> > - HTML Control using JS : Day & Night mode
+> > - HTML Control using JS : Implementation of Day & Night mode
 
 
