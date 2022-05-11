@@ -27,39 +27,7 @@
       </ul>
     </div>
   </div>
-  <script>
-    const bodyTag = document.querySelector('body');
-    const links = document.querySelectorAll('a');
-
-    const Body = {
-      setColor: function(color) {
-        bodyTag.style.color = color;
-      },
-      setBgcolor: function(color) {
-        bodyTag.style.backgroundColor = color;
-      }
-    }
-
-    const Links = {
-      setColor: function () {
-        for(var i = 0; i<links.length; i++) links[i].classList.toggle('a-night');
-      }
-    }
-
-
-    function nightDayHandler(self) {
-        if( self.value === 'night') { // day -> night
-          Body.setBgcolor('black');
-          Body.setColor('white');
-          Links.setColor();
-          self.value = 'day';
-        } else {
-          Body.setBgcolor('white');
-          Body.setColor('black');
-          Links.setColor();
-          self.value = 'night';
-        }
-    }
-  </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="color.js"></script>
 </body>
 </html>
